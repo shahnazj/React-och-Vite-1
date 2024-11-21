@@ -20,7 +20,7 @@ const AccordionItem = ({ item }) => {
         </i>
       </button>
       <div className="faq-answer">
-        <p className={`faq-content ${isOpen ? "activa" : ""}`}>
+        <p className={`faq-content ${isOpen ? "active" : ""}`}>
           {item.content}
         </p>
       </div>

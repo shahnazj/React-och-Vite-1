@@ -1,22 +1,17 @@
 import React from "react";
 
-const StarRating = ({ StarRating }) => {
-  console.log("We are here");
-  console.log(StarRating);
+const StarRating = ({ rating }) => {
   const maxStars = 5;
-  const filledStars = Math.min(StarRating, maxStars);
-  const emptyStars = maxStars - filledStars;
+  const emptyStars = maxStars - rating;
+  var i = 0;
   return (
     <div className="rating">
-      {[...Array(filledStars)].map((_, index) => (
-        <span key={index} className="star">
-          ★
-        </span>
+      {[...Array(rating)].map((_, index) => (
+        <i key={index + i} className="fa-sharp fa-solid fa-star"></i>
       ))}
+      {(i += rating)}
       {[...Array(emptyStars)].map((_, index) => (
-        <span key={index} className="star filled">
-          ★
-        </span>
+        <i key={index + i} className="fa-sharp fa-regular fa-star"></i>
       ))}
     </div>
   );

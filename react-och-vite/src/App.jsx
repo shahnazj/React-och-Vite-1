@@ -8,6 +8,7 @@ import Header from "./components/Header";
 import Showcase from "./components/Showcase";
 import Logos from "./components/logos";
 import "./App.css";
+import ClientTestimonials from "./components/ClientTestimonials";
 
 function App() {
   return (
@@ -16,6 +17,7 @@ function App() {
       <Showcase />
       <Logos />
       <FeatureSection />
+      <ClientTestimonials />
       <ContactForm />
       <FAQ />
       <SubscribeForm />

@@ -1,16 +1,14 @@
-{
-  import React, { useEffect, useState } from "react";
-import Testimonial from './Testimonials'
+import React, { useEffect, useState } from "react";
+import Testimonial from "./Testimonial";
 
 const ClientTestimonials = () => {
-  const [Testimonials, setTestimonials] = useState([]);
+  const [testimonials, setTestimonials] = useState([]);
 
   const getTestimonials = async () => {
     const res = await fetch(
       "https://win24-assignment.azurewebsites.net/api/testimonials"
     );
-
-    const data = await res.json()
+    const data = await res.json();
     setTestimonials(data);
   };
   useEffect(() => {
@@ -18,20 +16,16 @@ const ClientTestimonials = () => {
   }, []);
 
   return (
-    <section className="ClienTestimonials">
+    <section className="clientTestimonials">
+      <h3 className="h4 section-title">
+        Clients are
+        <br />
+        Loving Our App
+      </h3>
       <div className="clientTestimonials-container">
-        <div className="clientTestimonials-content">
-          <h3 className="h4 section-title">
-            Clients are
-            <br />
-            Loving Our App
-          </h3>
-
-          {clientTestimonials.map((clientTestimonial) => (
-            <Testimonial
-              key={clientTestimonial.id}
-              item={clientTestimonial}
-            />
+        <div className="clientTestimonials-content testimonials-grid">
+          {testimonials.map((item) => (
+            <Testimonial key={item.id} item={item}></Testimonial>
           ))}
         </div>
       </div>
@@ -39,7 +33,4 @@ const ClientTestimonials = () => {
   );
 };
 
-export default testimonials;
-
-
-}
+export default ClientTestimonials;

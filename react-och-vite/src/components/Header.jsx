@@ -79,6 +79,11 @@ const Header = () => {
             </a>
           </li>
           <li>
+            <a href="/contact.html" className="nav-link">
+              Contact
+            </a>
+          </li>
+          <li>
             <a href="#" className="btn btn-primary">
               <img src="images/icons/user.svg" alt="" />
               <span>Sign in / up</span>
