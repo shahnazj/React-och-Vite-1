@@ -15,10 +15,9 @@ const AccordionItem = ({ item }) => {
         onClick={toggleAccordion}
       >
         <span> {item.title} </span>
-        <i className="ìtem-icon fa-solid ${isOpen ? 'fa-chevron-up' : 'fa-chevron-down'}">
-          {" "}
-        </i>
+        <i class="fa-solid fa-chevron-down"></i>
       </button>
+
       <div className="faq-answer">
         <p className={`faq-content ${isOpen ? "active" : ""}`}>
           {item.content}

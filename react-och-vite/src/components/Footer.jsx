@@ -1,13 +1,11 @@
-import React from 'react'
+import React from "react";
 
 const Footer = () => {
   return (
     <section className="footnote">
-    <p>© 2024 Silicon. All rights reserved. 
-        Credit MadrasThemes</p>
-</section>
+      <p>© 2024 Silicon. All rights reserved. Credit MadrasThemes</p>
+    </section>
+  );
+};
 
-  )
-}
-
-export default Footer
+export default Footer;

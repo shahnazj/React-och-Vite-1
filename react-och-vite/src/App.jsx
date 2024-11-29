@@ -1,28 +1,22 @@
-import React from "react";
-import SubscribeForm from "./components/SubscribeForm";
-import FeatureSection from "./components/FeatureSection";
-import FAQ from "./components/FAQ";
-import Footer from "./components/Footer";
-import ContactForm from "./components/ContactForm";
-import Header from "./components/Header";
-import Showcase from "./components/Showcase";
-import Logos from "./components/logos";
+import { BrowserRouter, Routes, Route } from "react-router-dom";
 import "./App.css";
-import ClientTestimonials from "./components/ClientTestimonials";
+import Contact from "./components/Contact";
+import Footer from "./components/Footer";
+import Home from "./components/Home";
+import Features from "./components/Features";
 
 function App() {
   return (
-    <div className="wrapper">
-      <Header />
-      <Showcase />
-      <Logos />
-      <FeatureSection />
-      <ClientTestimonials />
-      <ContactForm />
-      <FAQ />
-      <SubscribeForm />
+    <BrowserRouter>
+      <main>
+        <Routes>
+          <Route path="/" element={<Home />} />
+          <Route path="/contact" element={<Contact />} />
+          <Route path="/features" element={<Features />} />
+        </Routes>
+      </main>
       <Footer />
-    </div>
+    </BrowserRouter>
   );
 }
 

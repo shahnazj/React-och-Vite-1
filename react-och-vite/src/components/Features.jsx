@@ -1,11 +1,18 @@
 import React from "react";
+import iphone1 from "../../public/images/iphone-tilted.png";
+import iconcredit from "../../public/images/icons/credit-card.svg";
+import iconshield from "../../public/images/icons/shield.svg";
+import iconbars from "../../public/images/icons/bars-graphic.svg";
+import communication from "../../public/images/icons/communication.svg";
+import wallet from "../../public/images/icons/wallet.svg";
+import happy from "../../public/images/icons/happy.svg";
 
-const FeatureSection = () => {
+const Features = () => {
   return (
     <section aria-label="App features" className="features">
       <div className="container">
         <div className="iphone">
-          <img src="/images/iphone-tilted.png" alt="" />
+          <img src={iphone1} alt="" />
         </div>
         <div className="text space-y-1">
           <h2 className="h1">App Features</h2>
@@ -18,7 +25,7 @@ const FeatureSection = () => {
           <div className="features-grid">
             <div className="feature-card">
               <div className="icon-container">
-                <img src="images/icons/credit-card.svg" alt="" />
+                <img src={iconcredit} alt="" />
               </div>
               <div className="space-y-1">
                 <h3 className="h5">Easy Payments</h3>
@@ -31,7 +38,7 @@ const FeatureSection = () => {
 
             <div className="feature-card">
               <div className="icon-container">
-                <img src="images/icons/shield.svg" alt="" />
+                <img src={iconshield} alt="" />
               </div>
               <div className="space-y-1">
                 <h3 className="h5">Data Security</h3>
@@ -44,7 +51,7 @@ const FeatureSection = () => {
 
             <div className="feature-card">
               <div className="icon-container">
-                <img src="images/icons/bars-graphic.svg" alt="" />
+                <img src={iconbars} alt="" />
               </div>
               <div className="space-y-1">
                 <h3 className="h5">Cost Statistics</h3>
@@ -57,7 +64,7 @@ const FeatureSection = () => {
 
             <div className="feature-card">
               <div className="icon-container">
-                <img src="images/icons/communication.svg" alt="" />
+                <img src={communication} alt="" />
               </div>
               <div className="space-y-1">
                 <h3 className="h5">Support 24/7</h3>
@@ -70,7 +77,7 @@ const FeatureSection = () => {
 
             <div className="feature-card">
               <div className="icon-container">
-                <img src="images/icons/wallet.svg" alt="" />
+                <img src={wallet} alt="" />
               </div>
               <div className="space-y-1">
                 <h3 className="h5">Regular Cashback</h3>
@@ -83,7 +90,7 @@ const FeatureSection = () => {
 
             <div className="feature-card">
               <div className="icon-container">
-                <img src="images/icons/happy.svg" alt="" />
+                <img src={happy} alt="" />
               </div>
               <div className="space-y-1">
                 <h3 className="h5">Top Standards</h3>
@@ -100,4 +107,4 @@ const FeatureSection = () => {
   );
 };
 
-export default FeatureSection;
+export default Features;

@@ -1,19 +1,19 @@
 import React from "react";
-import ClientTestimonials from "./ClientTestimonials";
 import StarRating from "./StarRating";
+import quoteIcon from "../../public/images/icons/quotes.svg";
 
 const Testimonial = ({ item }) => {
   return (
     <div className="testimonial-card">
-      <div className="quote-container">
-        <img src="/images/icons/quotes.svg" alt="" className="quote-icon" />
+      <div class="quote-container">
+        <img alt="" className="quote-icon" src={quoteIcon} />
       </div>
-      <StarRating rating={item.starRating} />
+      <StarRating starRating={item.starRating} />
       <p className="testimonial-text">{item.comment}</p>
       <div className="profile">
-        <img src={item.avatarUrl} alt={item.author} className="profile-img" />
+        <img className="profile-img" src={item.avatarUrl} alt={item.author} />
         <div className="profile-info">
-          <h4 className="profile-name">{item.author}</h4>
+          <h6 className="profile-name">{item.author}</h6>
           <p className="profile-role">{item.jobRole}</p>
         </div>
       </div>
